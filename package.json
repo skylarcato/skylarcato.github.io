@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "stylelint": {
+    "rules": {
+      "indentation": "tab"
+    }
+  },
+  "devDependencies": {
+    "browser-sync": "^2.14.0"
+  },
+  "scripts": {
+    "serve": "browser-sync start --server --open ui --reload-delay 1000 --files index.html styles.css"
+  }
+}

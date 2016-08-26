@@ -1,0 +1,18 @@
+body {
+	padding-top: 50px;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.feature {
+	background-color: #bebebe;
+	background-image: url('https://wallpaperscraft.com/image/skyscraper_city_black_white_13715_2560x1080.jpg');
+	background-size: cover;
+	height: 30em;
+}
+
+main {
+	text-align: justify;
+}
