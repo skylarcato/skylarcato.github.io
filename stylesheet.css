@@ -22,6 +22,39 @@ header {
   border-bottom: #0779e4 3px solid;
 }
 
+/* Add to your stylesheet.css */
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .column {
+    flex: 1; /* Each column takes up equal space */
+    margin: 0 10px; /* Add some spacing between the columns */
+    padding: 20px;
+    background-color: #fff; /* Optional: Adds a background color to each column */
+    box-shadow: 0 0 10px #ccc; /* Optional: Adds a slight shadow for depth */
+  }
+  
+  /* Adjusts the padding inside each column for content */
+  .column p {
+    margin: 20px 0;
+  }
+  
+
+/* Responsive adjustment for screens smaller than 600px */
+@media (max-width: 600px) {
+    .main-content {
+      flex-direction: column;
+    }
+    
+    .column {
+      margin: 10px 0; /* Adjust margin for stacked layout */
+    }
+  }
+  
 header h1 {
   margin: 0;
   padding-left: 20px;
