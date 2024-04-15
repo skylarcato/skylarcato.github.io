@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght&display=swap');
+
+/* General Resets and Font Application */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff; /* White background for a clean look */
+    color: #333333; /* Dark grey for text to ensure readability */
+}
+
+/* Header Styling */
+header {
+    background-image: linear-gradient(to right, #ffa500, #ffffff); /* Gradient from orange to white */
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: #ffa500; /* Orange for header text */
+}
+
+/* Navigation Styling */
+nav {
+    color: #333333;
+    background-color: #ffa500; /* Orange background */
+    font-weight: bold;
+    border: 2px solid #ffffff; /* White border for contrast */
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center; /* Center text for the nav element */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins to ensure true centering */
+    display: inline-block; /* Aligns the list as a block that can be centered */
+    width: auto;
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 20px; /* Right margin for spacing between items */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove right margin for the last item */
+}
+
+nav a {
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #dddddd; /* Light grey for hover effect */
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    font-size: 1.25em;
+}
+
+/* Emphasis Text Styling */
+em {
+    background-color: #ffa500; /* Orange background for emphasis */
+    color: #ffffff; /* White text for contrast */
+    padding: 0.2em;
+}
+
+/* Bold Paragraph Class */
+.bold-paragraph {
+    font-weight: bold;
+}
+
+/* Unique Page Header ID */
+#page-header {
+    color: #ffa500;
+    width: 100%;
+    padding: 1em 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ffa500;
+    color: #ffffff;
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1em;
+}
+
+/* Summary Box Styling */
+.summary {
+    border: 3px solid #ffa500;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    background-color: #ffffff; /* White background for contrast */
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    nav, footer {
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        margin-top: 10px;
+    }
+}
