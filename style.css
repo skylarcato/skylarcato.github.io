@@ -15,9 +15,12 @@ body {
 
 /* Header Styling */
 header {
-    background-image: linear-gradient(to right, #ffa500, #ffffff); /* Gradient from orange to white */
+    background-image: url('diag.tile.jpg'); /* Set the banner as the background */
+    background-size: cover; /* Cover ensures the background covers the header area */
+    background-position: center; /* Centers the background image */
     text-align: center;
     padding: 20px 0;
+    color: #333333; /* Adjust text color for visibility */
 }
 
 header h1 {

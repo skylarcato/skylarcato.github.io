@@ -1,34 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+    <!-- Don't forget to set charset to utf-8 -->
+    <meta charset="utf-8" >
+    <title>Example HTML Page</title>
+    <!-- Link to external style sheet - don't use inline or style blocks in HTML -->
+    <link rel="stylesheet" href="style.css">
+</head>   
 <body>
-  <header>
+    <header id="page-header">
+    <nav>
+        &bull; <a href="index.html">Home</a>
+        &bull; <a href="about.html">About</a>
+        &bull; <a href="contact.html">Contact</a>
+    </nav>    
+    <img src="logo.png" alt="logo" height="150">
     <h1>Skylar Cato</h1>
-    <img src="logo.png" alt="Your Logo" width="100" height="100">
-  </header>
-  
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact Me</a></li>
-    </ul>
-  </nav>
-  
-  <section>
-    <article>
-      <h2>About Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet nisl nec urna fermentum, ut viverra purus placerat. Quisque in varius ante. Nullam in sem id sem tristique condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin sagittis, libero eget aliquet blandit, orci lorem lacinia eros, eget facilisis felis sem ac lorem.</p>
-    </article>
-  </section>
-  
-  <footer>
-    <p>&copy; 2024 Skylar Cato.</p>
-  </footer>
+    </header>
+    <main>
+        <article>
+            <header>
+                <h2>This is an article header</h2>
+            </header>
+            <section>
+                <p lang="zxx"> <!-- zxx is language code used to identify lorem ipsum text -->
+                    Urna neque viverra justo nec. Fermentum dui faucibus in ornare quam viverra orci sagittis. Non odio
+                    euismod lacinia at quis. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque.
+                    Faucibus ornare suspendisse sed nisi. Penatibus et magnis dis parturient montes. Turpis egestas
+                    maecenas pharetra convallis posuere morbi leo urna molestie. Elementum nisi quis eleifend quam adipiscing vitae.
+                </p>
+                <p lang="zxx">
+                    A diam sollicitudin tempor id eu nisl nunc. In egestas erat
+                    imperdiet sed euismod nisi porta lorem mollis. Suspendisse interdum consectetur libero id faucibus
+                    nisl tincidunt. Amet purus gravida quis blandit. Penatibus et magnis dis parturient montes nascetur
+                    ridiculus. Est ante in nibh mauris cursus. Magnis dis parturient montes nascetur ridiculus. Vel
+                    facilisis volutpat est velit egestas dui. Urna cursus eget nunc scelerisque viverra. Velit scelerisque
+                    in dictum non consectetur a. Eget arcu dictum varius duis at. Urna nec tincidunt praesent semper
+                    feugiat nibh sed.
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h3>Another section with a header</h3>
+                </header>
+                <p lang="zxx">
+                    Urna neque viverra justo nec. Fermentum dui faucibus in ornare quam viverra orci sagittis. Non odio
+                    euismod lacinia at quis. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque.
+                    Faucibus ornare suspendisse sed nisi. Penatibus et magnis dis parturient montes. Turpis egestas
+                    maecenas pharetra convallis posuere morbi leo urna molestie. Elementum nisi quis eleifend quam adipiscing vitae.
+                </p>
+            </section>
+            <section class="summary">
+                <header>
+                    <h3>Summary</h3>
+                </header>
+                <p lang="zxx">
+                Quam id leo in vitae turpis massa sed elementum. Amet consectetur adipiscing elit ut aliquam. Maecenas
+                volutpat blandit aliquam etiam erat velit scelerisque in dictum. Orci eu lobortis elementum nibh tellus.
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer>
+        &copy; 2023 Skylar Cato
+    </footer>
 </body>
+
+
 </html>
