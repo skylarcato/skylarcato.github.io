@@ -162,11 +162,17 @@ tbody tr:nth-child(odd) {
     padding: 20px;
 }
 
+
 .gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
+
+.gallery img:hover {
+    transform: scale(1.2); /* Enlarges the image by 10% when hovered */
+}
+
 
 /*contact info on contact*/
 
