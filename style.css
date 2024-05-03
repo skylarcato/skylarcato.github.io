@@ -130,6 +130,12 @@ footer {
     background-color: #ffffff; /* White background for contrast */
 }
 
+p {
+    margin-top: 10px;    /* Space above each paragraph */
+    margin-bottom: 10px; /* Space below each paragraph */
+}
+
+
 /*table for about me info */
 table {
     width: 100%;
