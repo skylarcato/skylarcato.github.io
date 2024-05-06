@@ -29,10 +29,6 @@
     }
 }
 
-body {
-    background-color: #ffffff; /* White background for a clean look */
-    color: #333333; /* Dark grey for text to ensure readability */
-}
 
 /* Header Styling */
 header {
@@ -86,11 +82,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Main Content Styling */
-main {
-    padding: 20px;
-    font-size: 1.25em;
-}
 
 /* Emphasis Text Styling */
 em {
@@ -203,5 +194,64 @@ tbody tr:nth-child(odd) {
     }
 }
 
+/* main content and body content changes */
+main {
+    background: white;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
 
+/*contact form */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+fieldset {
+    border: none;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}

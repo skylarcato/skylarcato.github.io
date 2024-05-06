@@ -21,35 +21,49 @@
         <img src="logo.png" alt="logo" height="150">
         <h1>Skylar Cato</h1>
         </header>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>Contact Me - Skylar Cato</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
         <main>
-            <article>
-                <header>
-                    <h2>To Contact Me</h2>
-                </header>
-                <section>
-                    <div class="contact-info">
-                        <div class="contact-row">
-                            <p>Email: skylarcato@proton,me</p>
-                        </div>
-                        <div class="contact-row">
-                            <p>Text: 669,240,9777</p>
-                        </div>
-                        <!-- Additional contact details here -->
-                    </div>
-                    
-
-                <section class="summary">
-                    <header>
-                        <h3>Contact Disclaimer</h3>
-                    </header>
-                    <p lang="zxx">
-                        
-
-                        Please note that the contact information provided on this page is for professional inquiries only. I kindly request that you reach out to me if you have opportunities related to work, projects, or potential employment. Thank you for respecting my privacy and understanding.
-                    </p>
-                </section>
-            </article>
+            <h1>Contact Me</h1>
+            <form action="/submit-your-contact-info" method="post">
+                <fieldset>
+                    <legend>Your Details</legend>
+        
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="contact-reason">Reason for Contact:</label>
+                    <select id="contact-reason" name="contact_reason">
+                        <option value="inquiry">General Inquiry</option>
+                        <option value="hire">Hiring</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+        
+                    <fieldset>
+                        <legend>Contact Preferences</legend>
+                        <label><input type="checkbox" name="contact_pref" value="email"> Email</label>
+                        <label><input type="checkbox" name="contact_pref" value="phone"> Phone</label>
+                    </fieldset>
+        
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+        
+                    <input type="submit" value="Send Message">
+                </fieldset>
+            </form>
         </main>
+        </body>
+        </html>
+        
         <footer>
             &copy; 2023 Skylar Cato
         </footer>
