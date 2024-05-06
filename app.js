@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 app.use(bodyParser.urlencoded({ extended: true })); // Middleware to parse form data
 
@@ -14,6 +17,3 @@ app.post('/submit-your-contact-info', (req, res) => {
     res.send('Thank you for your message, we will be in touch soon!');
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
-});
