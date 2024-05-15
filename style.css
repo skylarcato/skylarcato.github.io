@@ -46,41 +46,65 @@ header h1 {
 }
 
 /* Navigation Styling */
-nav {
-    color: #333333;
-    background-color: #ffa500; /* Orange background */
-    font-weight: bold;
-    border: 2px solid #ffffff; /* White border for contrast */
-    padding: 1em;
-    margin-bottom: 1em;
-    text-align: center; /* Center text for the nav element */
+
+/* Basic styling for the navbar */
+.navbar {
+    display: none;  /* Initially hide the navbar */
+    background-color: #ffffff; /* Purple background */
+    width: 100%;
+    text-align: center;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+.navbar ul {
+    list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    margin: 0 10px;
+.navbar ul li {
+    padding: 12px;
+    border-bottom: 1px solid white; /* White border for separation */
 }
 
-
-nav ul li:last-child {
-    margin-right: 0; /* Remove right margin for the last item */
-}
-
-nav a {
-    color: #ffffff; /* White text for contrast */
+.navbar ul li a {
+    color: rgb(0, 0, 0); /* White text color */
     text-decoration: none;
+    display: block;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-nav a:hover {
-    color: #9f9e9e; /* Light grey for hover effect */
-    text-decoration: underline;
+.navbar ul li a:hover, .navbar ul li a:focus {
+    background-color: #FFA500; /* Orange background on hover/focus */
 }
+
+/* Hamburger icon styling */
+.hamburger {
+    background: none;
+    border: none;
+    color: #FFA500; /* Orange color */
+    font-size: 24px;
+    cursor: pointer;
+    display: block;  /* Ensure it's always visible by default */
+    padding: 10px 0; /* Padding for easier touch */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;  /* Hide hamburger icon on larger screens */
+    }
+
+    .navbar {
+        display: block;  /* Show full navigation menu on larger screens */
+    }
+
+    .navbar ul li {
+        display: inline-block;  /* Display links in a line */
+        border-bottom: none;  /* Remove borders between links */
+        margin-right: 10px; /* Space between menu items */
+    }
+}
+
 
 
 /* Emphasis Text Styling */
@@ -255,4 +279,30 @@ legend {
 label {
     display: block;
     margin-top: 20px;
+}
+
+/* Add padding around the form itself to push it away from the edges */
+form {
+    padding: 20px; /* Adjust the padding as needed */
+    margin: auto; /* Centers the form in the page */
+    max-width: 600px; /* Sets a max width for the form */
+}
+
+/* Style input fields */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Makes input take full width of the form */
+    padding: 10px; /* Adds padding inside the input fields */
+    margin-bottom: 15px; /* Adds space below each input field */
+    border: 1px solid #ccc; /* Optional: adds a border */
+    box-sizing: border-box; /* Makes sure padding does not affect width */
+}
+
+/* Enhance the appearance of the submit button */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
