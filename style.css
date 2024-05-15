@@ -49,9 +49,13 @@ header h1 {
 
 /* Basic styling for the navbar */
 .navbar {
-    display: none;  /* Initially hide the navbar */
-    background-color: #ffffff; /* Purple background */
+    position: fixed; /* Fix navbar to the top of the page */
+    top: 0;
+    left: 0;
     width: 100%;
+    background-color: #ffffff; /* Example: purple background */
+    z-index: 1000; /* Ensure navbar is above other content */
+    display: none; /* Initially hide navbar */
     text-align: center;
 }
 
@@ -79,32 +83,42 @@ header h1 {
 
 /* Hamburger icon styling */
 .hamburger {
+    display: none; /* Hide by default, will show in mobile view */
     background: none;
     border: none;
-    color: #FFA500; /* Orange color */
+    color: #FFA500; /* Example: orange color */
     font-size: 24px;
     cursor: pointer;
-    display: block;  /* Ensure it's always visible by default */
-    padding: 10px 0; /* Padding for easier touch */
+    padding: 10px 15px;
 }
 
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .hamburger {
-        display: none;  /* Hide hamburger icon on larger screens */
+        display: none; /* Keep hamburger hidden on larger screens */
     }
 
     .navbar {
-        display: block;  /* Show full navigation menu on larger screens */
+        display: block; /* Show full navigation menu on larger screens */
     }
 
     .navbar ul li {
-        display: inline-block;  /* Display links in a line */
-        border-bottom: none;  /* Remove borders between links */
+        display: inline-block; /* Horizontal menu on desktop */
         margin-right: 10px; /* Space between menu items */
+        border-bottom: none; /* No border for desktop */
     }
 }
 
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    .navbar {
+        display: none; /* Hide full navigation menu initially on smaller screens */
+    }
+}
 
 
 /* Emphasis Text Styling */
@@ -135,6 +149,11 @@ footer {
     text-align: center;
     padding: 1em 0;
     font-size: 1em;
+}
+
+/* Ensure body content doesn't hide under the fixed navbar */
+body {
+    padding-top: 10px; /* Adjust based on the height of your navbar */
 }
 
 /* Summary Box Styling */
