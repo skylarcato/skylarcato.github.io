@@ -15,9 +15,12 @@ function replaceContent() {
 
 function toggleMenu() {
     var navbar = document.querySelector('.navbar');
-    if (navbar.style.display === "block") {
-        navbar.style.display = "none";
+    var hamburger = document.querySelector('.hamburger');
+    if (navbar.classList.contains('show')) {
+        navbar.classList.remove('show');
+        hamburger.classList.remove('open');
     } else {
-        navbar.style.display = "block";
+        navbar.classList.add('show');
+        hamburger.classList.add('open');
     }
 }

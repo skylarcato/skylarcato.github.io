@@ -51,14 +51,48 @@ header h1 {
 .navbar {
     position: fixed; /* Fix navbar to the top of the page */
     top: 0;
-    left: 0;
+    left: 0; /* Align navbar to the left */
     width: 100%;
-    background-color: #ffffff; /* Example: purple background */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     z-index: 1000; /* Ensure navbar is above other content */
     display: none; /* Initially hide navbar */
-    text-align: center;
+    text-align: center; /* Align text to the left */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    transform: translateY(-100%); /* Hide the navbar off-screen initially */
 }
 
+.navbar.show {
+    display: block;
+    transform: translateY(0); /* Slide the navbar into view */
+}
+
+/* Ensure body content doesn't hide under the fixed navbar */
+body {
+    padding-top: 50px; /* Adjust based on the height of your navbar */
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    background: none;
+    border: none;
+    color: #FFA500; /* Orange color */
+    font-size: 24px;
+    cursor: pointer;
+    display: block; /* Always display the hamburger icon */
+    padding: 10px 15px;
+    position: fixed; /* Fix position at the top */
+    top: 10px; /* Adjust positioning */
+    left: 10px; /* Adjust positioning */
+    z-index: 1001; /* Ensure it's above other content */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.hamburger.open {
+    transform: rotate(90deg); /* Rotate the icon when the menu is open */
+}
+
+/* Navbar link styling */
 .navbar ul {
     list-style-type: none;
     padding: 0;
@@ -67,58 +101,21 @@ header h1 {
 
 .navbar ul li {
     padding: 12px;
-    border-bottom: 1px solid white; /* White border for separation */
+    border-bottom: 1px solid #ddd; /* Light grey border for separation */
 }
 
 .navbar ul li a {
-    color: rgb(0, 0, 0); /* White text color */
+    color: black; /* Black text color */
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
 .navbar ul li a:hover, .navbar ul li a:focus {
     background-color: #FFA500; /* Orange background on hover/focus */
+    color: white; /* White text on hover/focus for contrast */
 }
 
-/* Hamburger icon styling */
-.hamburger {
-    display: none; /* Hide by default, will show in mobile view */
-    background: none;
-    border: none;
-    color: #FFA500; /* Example: orange color */
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px 15px;
-}
-
-/* Media query for larger screens */
-@media (min-width: 768px) {
-    .hamburger {
-        display: none; /* Keep hamburger hidden on larger screens */
-    }
-
-    .navbar {
-        display: block; /* Show full navigation menu on larger screens */
-    }
-
-    .navbar ul li {
-        display: inline-block; /* Horizontal menu on desktop */
-        margin-right: 10px; /* Space between menu items */
-        border-bottom: none; /* No border for desktop */
-    }
-}
-
-/* Media query for smaller screens */
-@media (max-width: 767px) {
-    .hamburger {
-        display: block; /* Show hamburger icon on smaller screens */
-    }
-
-    .navbar {
-        display: none; /* Hide full navigation menu initially on smaller screens */
-    }
-}
 
 
 /* Emphasis Text Styling */
