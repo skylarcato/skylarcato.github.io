@@ -8,91 +8,48 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.two-columns {
-    display: flex;
-    justify-content: space-between; /* This will space out the columns evenly */
-    padding: 20px; /* Optional: Adds padding around the content */
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
-
-.two-columns section {
-    flex: 1; /* Makes each section take up equal space */
-    margin-right: 10px; /* Optional: Adds margin to the right of each section except the last */
-}
-
-.two-columns section:last-child {
-    margin-right: 0; /* Removes margin from the last section */
-}
-
-@media (max-width: 768px) {
-    .two-columns {
-        display: block; /* Changes layout to block, stacking the sections */
-    }
-}
-
 
 /* Header Styling */
 header {
-    background-image: url('diag.tile.jpeg'); /* Set the banner as the background */
-    background-size: cover; /* Cover ensures the background covers the header area */
-    background-position: center; /* Centers the background image */
+    background-image: url('diag.tile.jpeg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
     padding: 20px 0;
-    color: #f7f7f7; /* Adjust text color for visibility */
+    color: #f7f7f7;
 }
 
-
 header h1 {
-    color: #fefbfb; /* Orange for header text */
+    color: #fefbfb;
 }
 
 /* Navigation Styling */
-
-/* Basic styling for the navbar */
 .navbar {
-    position: fixed; /* Fix navbar to the top of the page */
+    position: fixed;
     top: 0;
-    left: 0; /* Align navbar to the left */
+    left: 0;
     width: 100%;
-    background-color: #fff; /* White background */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    z-index: 1000; /* Ensure navbar is above other content */
-    display: none; /* Initially hide navbar */
-    text-align: center; /* Align text to the left */
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
-    transform: translateY(-100%); /* Hide the navbar off-screen initially */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
 }
 
 .navbar.show {
     display: block;
-    transform: translateY(0); /* Slide the navbar into view */
+    transform: translateY(0);
 }
 
-/* Ensure body content doesn't hide under the fixed navbar */
-body {
-    padding-top: 50px; /* Adjust based on the height of your navbar */
-}
-
-/* Hamburger icon styling */
-.hamburger {
-    background: none;
-    border: none;
-    color: #FFA500; /* Orange color */
-    font-size: 24px;
-    cursor: pointer;
-    display: block; /* Always display the hamburger icon */
-    padding: 10px 15px;
-    position: fixed; /* Fix position at the top */
-    top: 10px; /* Adjust positioning */
-    left: 10px; /* Adjust positioning */
-    z-index: 1001; /* Ensure it's above other content */
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
-}
-
-.hamburger.open {
-    transform: rotate(90deg); /* Rotate the icon when the menu is open */
-}
-
-/* Navbar link styling */
 .navbar ul {
     list-style-type: none;
     padding: 0;
@@ -101,27 +58,67 @@ body {
 
 .navbar ul li {
     padding: 12px;
-    border-bottom: 1px solid #ddd; /* Light grey border for separation */
+    border-bottom: 1px solid #ddd;
 }
 
 .navbar ul li a {
-    color: black; /* Black text color */
+    color: black;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar ul li a:hover, .navbar ul li a:focus {
-    background-color: #FFA500; /* Orange background on hover/focus */
-    color: white; /* White text on hover/focus for contrast */
+    background-color: #FFA500;
+    color: white;
 }
 
+/* Hamburger Icon Styling */
+.hamburger {
+    background: none;
+    border: none;
+    color: #FFA500;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    padding: 10px 15px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+}
 
+.hamburger.open {
+    transform: rotate(90deg);
+}
+
+/* Two Columns Layout */
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.two-columns section {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.two-columns section:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        display: block;
+    }
+}
 
 /* Emphasis Text Styling */
 em {
-    background-color: #ffa500; /* Orange background for emphasis */
-    color: #ffffff; /* White text for contrast */
+    background-color: #ffa500;
+    color: #ffffff;
     padding: 0.2em;
 }
 
@@ -148,26 +145,20 @@ footer {
     font-size: 1em;
 }
 
-/* Ensure body content doesn't hide under the fixed navbar */
-body {
-    padding-top: 10px; /* Adjust based on the height of your navbar */
-}
-
 /* Summary Box Styling */
 .summary {
     border: 3px solid #ffa500;
     padding: 0.5em;
     margin: 0.5em 0;
-    background-color: #ffffff; /* White background for contrast */
+    background-color: #ffffff;
 }
 
 p {
-    margin-top: 10px;    /* Space above each paragraph */
-    margin-bottom: 10px; /* Space below each paragraph */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-
-/*table for about me info */
+/* Table Styling for About Me Info */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -175,54 +166,48 @@ table {
 }
 
 th, td {
-    border: 1px solid #ccc; /* Light gray border */
+    border: 1px solid #ccc;
     text-align: left;
     padding: 8px;
 }
 
 th {
-    background-color: #ffa500; /* Orange background for headers */
+    background-color: #ffa500;
     color: white;
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #f2f2f2; /* Light gray for odd rows */
+    background-color: #f2f2f2;
 }
 
-
-/*Pictures  in gallery*/
-
+/* Gallery Styling */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates dynamic columns */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
     padding: 20px;
 }
 
-
 .gallery img {
-    transition: transform 0.3s ease; /* Smooth transition effect */
-    width: 100%; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
 }
 
 .gallery img:hover {
-    transform: scale(1.2); /* Enlarges the image by 10% when hovered */
+    transform: scale(1.2);
 }
 
-
-/*contact info on contact*/
-
+/* Contact Info Styling */
 .contact-info {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
     padding: 20px;
 }
 
 .contact-row {
     margin-bottom: 10px;
 }
-
 
 @media (max-width: 600px) {
     nav ul {
@@ -234,23 +219,16 @@ tbody tr:nth-child(odd) {
     }
 }
 
-/* main content and body content changes */
+/* Main Content and Body Content Changes */
 main {
     background: white;
     width: 90%;
     margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/*contact form */
+/* Contact Form Styling */
 input[type="text"],
 input[type="email"],
 select,
@@ -285,7 +263,6 @@ fieldset {
     border-top: 1px solid #eee;
     margin-top: 20px;
 }
-/**/
 
 legend {
     font-size: 1.2em;
@@ -297,23 +274,12 @@ label {
     margin-top: 20px;
 }
 
-/* Add padding around the form itself to push it away from the edges */
 form {
-    padding: 20px; /* Adjust the padding as needed */
-    margin: auto; /* Centers the form in the page */
-    max-width: 600px; /* Sets a max width for the form */
+    padding: 20px;
+    margin: auto;
+    max-width: 600px;
 }
 
-/* Style input fields */
-input[type="text"], input[type="email"], textarea {
-    width: 100%; /* Makes input take full width of the form */
-    padding: 10px; /* Adds padding inside the input fields */
-    margin-bottom: 15px; /* Adds space below each input field */
-    border: 1px solid #ccc; /* Optional: adds a border */
-    box-sizing: border-box; /* Makes sure padding does not affect width */
-}
-
-/* Enhance the appearance of the submit button */
 button {
     padding: 10px 20px;
     background-color: #4CAF50;

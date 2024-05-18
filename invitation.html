@@ -5,36 +5,28 @@
     <title>Volunteer Invitation</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<!-- Hamburger Menu Icon -->
-<button class="hamburger" onclick="toggleMenu()">☰</button>
-
-<!-- Navigation Links -->
-<nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="interests.html">My Interests</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="invitation.html">Invitation</a></li>
-    </ul>
-</nav>
-
-<head>
-    <!-- Don't forget to set charset to utf-8 -->
-    <meta charset="utf-8" >
-    <title>Skylar Cato Portfolio</title>
-    <!-- Link to external style sheet - don't use inline or style blocks in HTML -->
-    <link rel="stylesheet" href="style.css">
-</head>   
 <body>
-    <header id="page-header">
+    <!-- Hamburger Menu Icon -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-    <img src="logo.png" alt="logo" height="150">
-    <h1>Skylar Cato</h1>
+    <!-- Navigation Links -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="interests.html">My Interests</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="invitation.html">Invitation</a></li>
+        </ul>
+    </nav>
+    
+    <header id="page-header">
+        <img src="logo.png" alt="logo" height="150">
+        <h1>Skylar Cato</h1>
     </header>
-    <body>
+
+    <main>
         <h1>Volunteer Invitation Form</h1>
         <p>Hello <span id="recipientNamePlaceholder">[Recipient Name]</span>!</p>
         <p>You have been invited to volunteer for an event held on July 1st. Please respond to this email to sign up as a volunteer.</p>
@@ -43,10 +35,11 @@
         <form id="invitationForm" onsubmit="replaceContent(); return false;">
             <label for="recipientNameInput">Recipient's Name:</label>
             <input type="text" id="recipientNameInput" required>
-            
             <button type="submit">Generate Invitation</button>
         </form>
-    
-        <script src="script.js"></script>
-    </body>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
+
