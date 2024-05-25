@@ -24,3 +24,47 @@ function toggleMenu() {
         hamburger.classList.add('open');
     }
 }
+
+
+let volunteers = [];
+
+function displayVolunteers() {
+    const volunteerList = document.getElementById('volunteerList');
+    volunteerList.value = volunteers.map((volunteer, index) => `${index + 1}. ${volunteer}`).join('\n');
+}
+
+document.getElementById('add_button').addEventListener('click', function() {
+    const firstName = document.getElementById('first_name').value.trim();
+    const lastName = document.getElementById('last_name').value.trim();
+    
+    if (firstName && lastName) {
+        volunteers.push(`${firstName} ${lastName}`);
+        displayVolunteers();
+    } else {
+        alert('Please enter both first and last name.');
+    }
+});
+
+document.getElementById('delete_button').addEventListener('click', function() {
+    const firstName = document.getElementById('first_name').value.trim();
+    const lastName = document.getElementById('last_name').value.trim();
+    const fullName = `${firstName} ${lastName}`;
+    
+    const index = volunteers.indexOf(fullName);
+    if (index !== -1) {
+        volunteers.splice(index, 1);
+        displayVolunteers();
+    } else {
+        alert('Volunteer not found.');
+    }
+});
+
+document.getElementById('clear_button').addEventListener('click', function() {
+    volunteers = [];
+    displayVolunteers();
+});
+
+document.getElementById('sort_button').addEventListener('click', function() {
+    volunteers.sort();
+    displayVolunteers();
+});
