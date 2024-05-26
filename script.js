@@ -16,12 +16,20 @@ function replaceContent() {
 function toggleMenu() {
     var navbar = document.querySelector('.navbar');
     var hamburger = document.querySelector('.hamburger');
+    var navItems = navbar.querySelectorAll('li');
+
     if (navbar.classList.contains('show')) {
         navbar.classList.remove('show');
         hamburger.classList.remove('open');
+        navItems.forEach((item, index) => {
+            item.style.animation = '';
+        });
     } else {
         navbar.classList.add('show');
         hamburger.classList.add('open');
+        navItems.forEach((item, index) => {
+            item.style.animation = `fadeIn 0.5s ease-in-out forwards ${index * 0.1}s`;
+        });
     }
 }
 

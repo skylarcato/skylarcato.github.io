@@ -41,13 +41,14 @@ header h1 {
     z-index: 1000;
     display: none;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(-100%);
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
 }
 
 .navbar.show {
     display: block;
-    transform: translateY(0);
+    max-height: 500px; /* Adjust this value based on the number of menu items */
 }
 
 .navbar ul {
@@ -59,6 +60,9 @@ header h1 {
 .navbar ul li {
     padding: 12px;
     border-bottom: 1px solid #ddd;
+    animation: fadeIn 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .navbar ul li a {
@@ -91,6 +95,18 @@ header h1 {
 
 .hamburger.open {
     transform: rotate(90deg);
+}
+
+/* Keyframes for Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Two Columns Layout */
